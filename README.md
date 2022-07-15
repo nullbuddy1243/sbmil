@@ -2,6 +2,8 @@
 
 ## UI sketch 1 & day 1 product vision
 
+![uisketch1.png](./static/uisketch1.png)
+
 UI sketch 1
 
 Skill Zone Navigation + Skill Card List View w/ Barter Drawer
