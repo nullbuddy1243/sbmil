@@ -2,15 +2,20 @@ export default function SkillCard(props) {
   return (
     <div className="skill">
       <br></br>
-      <div class="container">
-        <div class="flex-1 leftmost">
+      <div className="container">
+        <div className="sidezone flex-1 leftmost">
           <div>sidezone</div>
+          <img 
+            src={`https://miladymaker.net/milady/${Math.floor(Math.random() * 10000) + 1}.png`} 
+            alt="Milady"
+            className='pfp'
+          />
         </div>
-        <div class="flex-2">
+        <div className="flex-2">
           flex-1
-          <div class="flex-2-child">
-            <p class="skilltext skilltexthead"> Skills </p>
-            <ul class="skilltext">
+          <div className="flex-2-child">
+            <p className="skilltext skilltexthead"> Skills </p>
+            <ul className="skilltext">
             {props.skills.slice(0,3).map(function(skill, i) {
                 return (
                   <li className='skillitem' key={i}>{`${skill}\n`}</li>
@@ -18,8 +23,8 @@ export default function SkillCard(props) {
               })}
             </ul>
           </div>
-          <div class="flex-2-child socialbox">
-            <ul class="skilltext">
+          <div className="flex-2-child socialbox">
+            <ul className="skilltext">
               {props.skills.slice(3,5).map(function(skill, i) {
                   return (
                     <li className='skillitem' key={i}>{`${skill}\n`}</li>
@@ -28,11 +33,11 @@ export default function SkillCard(props) {
             </ul>
           </div>
         </div>
-        <div class="flex-2">
+        <div className="flex-2">
           flex-2<br></br>
-          <div class="flex-2-child">
-            <p class="skilltext skilltexthead"> Needs </p>
-            <ul class="skilltext">
+          <div className="flex-2-child">
+            <p className="skilltext skilltexthead"> Needs </p>
+            <ul className="skilltext">
             {props.needs.slice(0,3).map(function(skill, i) {
                 return (
                   <li className='skillitem' key={i}>{`${skill}\n`}</li>
@@ -40,8 +45,8 @@ export default function SkillCard(props) {
               })}
             </ul>
           </div>
-          <div class="flex-2-child socialbox">
-            <ul class="skilltext">
+          <div className="flex-2-child socialbox">
+            <ul className="skilltext">
               {props.needs.slice(3,5).map(function(skill, i) {
                   return (
                     <li className='skillitem' key={i}>{`${skill}\n`}</li>

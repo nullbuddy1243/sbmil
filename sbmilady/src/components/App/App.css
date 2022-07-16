@@ -6,6 +6,15 @@
   pointer-events: none;
 }
 
+.sidezone {
+  padding: 10px;
+}
+.pfp {
+  border:2px solid #282c34;
+  border-radius: 2px;
+  max-width: 140px;
+}
+
 .skill {
   background-color: dimgrey;
   color: chartreuse;
