@@ -11,11 +11,5 @@ export default function App() {
       <Box />
       <Box />
     </div>
-
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={sbmilady} className="sbmilady1" alt="logo" />
-    //   </header>
-    // </div>
   );
 }

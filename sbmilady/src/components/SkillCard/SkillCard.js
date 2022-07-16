@@ -1,7 +1,6 @@
 import athousandwords from "../../utils/1000words.js";
 
 export default function SkillCard(props) {
-  console.log(props)
   let words = athousandwords.split(" ");
   let rando = Array(2)
     .fill()
@@ -9,7 +8,6 @@ export default function SkillCard(props) {
   return (
     <div className="skill">
       <br></br>
-      {/* <hr></hr> */}
       <div class="container">
         <div class="flex-1 leftmost">
           <div>skill div</div>
@@ -52,7 +50,6 @@ export default function SkillCard(props) {
           </div>
         </div>
       </div>
-      {/* <img src={stronger} className="" alt="logo" /> */}
     </div>
   );
 }
