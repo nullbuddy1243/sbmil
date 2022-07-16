@@ -7,7 +7,6 @@
 }
 
 .skill {
-
   background-color: dimgrey;
   color: chartreuse;
   font-family: monospace;
@@ -16,12 +15,10 @@
   flex-direction: row;
   flex-wrap: nowrap;
   border-style: inset;
-  border-width: 3px;
-  padding-right: 5px;
-
+  border-width: 0px;
+  padding-right: 0px;
   align-self: stretch;
   width: 100%;
-
 }
 
 
@@ -33,8 +30,34 @@
   /* display: contents; */
 }
 
+<<<<<<< HEAD:sbmilady/src/components/App/App.css
+=======
+/* https://stackoverflow.com/questions/15381172/how-can-i-make-flexbox-children-100-height-of-their-parent/50474036#50474036
+ */
+.boxflag {
+  color: chartreuse;
+  /* display: block; */
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  background-color:  #454f62;
+}
+
+.box {
+  display: flex;
+  /* justify-content: space-between; */
+  /* border-style: groove; */
+  color: #454f62;
+  border-radius: 0px;
+  margin: 0;
+  padding-bottom: 0;
+  /* border-style: double; */
+}
+
+>>>>>>> 376a74ad48b187af1a2699c8b36de65a0eb672d7:sbmilady/src/App.css
 .container {
-  height: 200px;
+  height: 250px;
   width: 500px;
   display: flex;
   flex-direction: row;
@@ -62,7 +85,7 @@
   background-color: black;
   border-color: gold;
   border-style:inset;
-  border-width: 2px;
+  border-width: 3px;
 }
 
 
