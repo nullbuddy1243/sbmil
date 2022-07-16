@@ -3,6 +3,7 @@
 ## UI sketch 1 & day 1 product vision
 
 ![uisketch1.png](./static/uisketch1.png)
+![ui flexbox experiments](./UI%20preview%20just%20fucking%20around%20tho%20really.png)
 
 UI sketch 1
 
