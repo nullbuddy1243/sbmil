@@ -1,0 +1,2775 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "approved",
+          "type": "bool"
+        }
+      ],
+      "name": "ApprovalForAll",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "MintSoulBoundToken",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "revoker",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "RevokeSoulBoundToken",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "baseURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "creator",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "getApproved",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "isApprovedForAll",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "mintToSoul",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "revokeSoulBoundToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_data",
+          "type": "bytes"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "approved",
+          "type": "bool"
+        }
+      ],
+      "name": "setApprovalForAll",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "approve(address,uint256)": "095ea7b3",
+    "balanceOf(address)": "70a08231",
+    "baseURI()": "6c0360eb",
+    "creator()": "02d05d3f",
+    "getApproved(uint256)": "081812fc",
+    "isApprovedForAll(address,address)": "e985e9c5",
+    "mintToSoul(address,uint256)": "384c9ceb",
+    "name()": "06fdde03",
+    "ownerOf(uint256)": "6352211e",
+    "revokeSoulBoundToken(uint256)": "54d0dd4c",
+    "safeTransferFrom(address,address,uint256)": "42842e0e",
+    "safeTransferFrom(address,address,uint256,bytes)": "b88d4fde",
+    "setApprovalForAll(address,bool)": "a22cb465",
+    "supportsInterface(bytes4)": "01ffc9a7",
+    "symbol()": "95d89b41",
+    "tokenURI(uint256)": "c87b56dd",
+    "transferFrom(address,address,uint256)": "23b872dd"
+  },
+  "ast": {
+    "absolutePath": "src/SoulBoundToken.sol",
+    "id": 22149,
+    "exportedSymbols": {
+      "ERC721": [
+        21916
+      ],
+      "ERC721TokenReceiver": [
+        21936
+      ],
+      "SoulBoundToken": [
+        22148
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "33:3510:8",
+    "nodes": [
+      {
+        "id": 21957,
+        "nodeType": "PragmaDirective",
+        "src": "33:23:8",
+        "literals": [
+          "solidity",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 21958,
+        "nodeType": "ImportDirective",
+        "src": "58:35:8",
+        "absolutePath": "lib/solmate/src/tokens/ERC721.sol",
+        "file": "solmate/tokens/ERC721.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 22149,
+        "sourceUnit": 21937,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 22148,
+        "nodeType": "ContractDefinition",
+        "src": "541:3001:8",
+        "nodes": [
+          {
+            "id": 21963,
+            "nodeType": "VariableDeclaration",
+            "src": "590:22:8",
+            "constant": false,
+            "functionSelector": "02d05d3f",
+            "mutability": "mutable",
+            "name": "creator",
+            "nameLocation": "605:7:8",
+            "scope": 22148,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 21962,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "590:7:8",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 21965,
+            "nodeType": "VariableDeclaration",
+            "src": "618:21:8",
+            "constant": false,
+            "functionSelector": "6c0360eb",
+            "mutability": "mutable",
+            "name": "baseURI",
+            "nameLocation": "632:7:8",
+            "scope": 22148,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 21964,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "618:6:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 21971,
+            "nodeType": "EventDefinition",
+            "src": "646:54:8",
+            "anonymous": false,
+            "eventSelector": "05710630d326d510d3fd7aa36f6a453670fbf258bfede563b68011db5f6a0485",
+            "name": "MintSoulBoundToken",
+            "nameLocation": "652:18:8",
+            "parameters": {
+              "id": 21970,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 21967,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "679:2:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 21971,
+                  "src": "671:10:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 21966,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "671:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 21969,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "691:7:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 21971,
+                  "src": "683:15:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 21968,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "683:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "670:29:8"
+            }
+          },
+          {
+            "id": 21977,
+            "nodeType": "EventDefinition",
+            "src": "705:61:8",
+            "anonymous": false,
+            "eventSelector": "d3ebb4fd0eeee2100404900ef5cc452e1fd2c4bad55d0c9f8dd510669cfb9479",
+            "name": "RevokeSoulBoundToken",
+            "nameLocation": "711:20:8",
+            "parameters": {
+              "id": 21976,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 21973,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "revoker",
+                  "nameLocation": "740:7:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 21977,
+                  "src": "732:15:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 21972,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "732:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 21975,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "757:7:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 21977,
+                  "src": "749:15:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 21974,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "749:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "731:34:8"
+            }
+          },
+          {
+            "id": 21989,
+            "nodeType": "ModifierDefinition",
+            "src": "772:172:8",
+            "body": {
+              "id": 21988,
+              "nodeType": "Block",
+              "src": "798:146:8",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 21983,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "expression": {
+                            "id": 21980,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "829:3:8",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 21981,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "829:10:8",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "id": 21982,
+                          "name": "creator",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 21963,
+                          "src": "843:7:8",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "829:21:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "536f756c426f756e6420546f6b656e3a204f6e6c79205342542043726561746f722043616e20497373756520546f6b656e73",
+                        "id": 21984,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "864:52:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_bce2ea0daaab02243ceabdafedfe3cb382a11556405ab14d12246402a65c3f42",
+                          "typeString": "literal_string \"SoulBound Token: Only SBT Creator Can Issue Tokens\""
+                        },
+                        "value": "SoulBound Token: Only SBT Creator Can Issue Tokens"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_bce2ea0daaab02243ceabdafedfe3cb382a11556405ab14d12246402a65c3f42",
+                          "typeString": "literal_string \"SoulBound Token: Only SBT Creator Can Issue Tokens\""
+                        }
+                      ],
+                      "id": 21979,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "808:7:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 21985,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "808:118:8",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 21986,
+                  "nodeType": "ExpressionStatement",
+                  "src": "808:118:8"
+                },
+                {
+                  "id": 21987,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "936:1:8"
+                }
+              ]
+            },
+            "name": "onlySBTCreator",
+            "nameLocation": "781:14:8",
+            "parameters": {
+              "id": 21978,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "795:2:8"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 22012,
+            "nodeType": "FunctionDefinition",
+            "src": "950:198:8",
+            "body": {
+              "id": 22011,
+              "nodeType": "Block",
+              "src": "1083:65:8",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 22005,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 22002,
+                      "name": "creator",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21963,
+                      "src": "1093:7:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "expression": {
+                        "id": 22003,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -15,
+                        "src": "1103:3:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 22004,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "src": "1103:10:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1093:20:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 22006,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1093:20:8"
+                },
+                {
+                  "expression": {
+                    "id": 22009,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 22007,
+                      "name": "baseURI",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21965,
+                      "src": "1123:7:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 22008,
+                      "name": "baseURI_",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21995,
+                      "src": "1133:8:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "1123:18:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 22010,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1123:18:8"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "id": 21998,
+                    "name": "name_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 21991,
+                    "src": "1067:5:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  {
+                    "id": 21999,
+                    "name": "symbol_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 21993,
+                    "src": "1074:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  }
+                ],
+                "id": 22000,
+                "kind": "baseConstructorSpecifier",
+                "modifierName": {
+                  "id": 21997,
+                  "name": "ERC721",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 21916,
+                  "src": "1060:6:8"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1060:22:8"
+              }
+            ],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 21996,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 21991,
+                  "mutability": "mutable",
+                  "name": "name_",
+                  "nameLocation": "985:5:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22012,
+                  "src": "971:19:8",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 21990,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "971:6:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 21993,
+                  "mutability": "mutable",
+                  "name": "symbol_",
+                  "nameLocation": "1014:7:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22012,
+                  "src": "1000:21:8",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 21992,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1000:6:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 21995,
+                  "mutability": "mutable",
+                  "name": "baseURI_",
+                  "nameLocation": "1045:8:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22012,
+                  "src": "1031:22:8",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 21994,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1031:6:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "961:98:8"
+            },
+            "returnParameters": {
+              "id": 22001,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1083:0:8"
+            },
+            "scope": 22148,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 22033,
+            "nodeType": "FunctionDefinition",
+            "src": "1288:188:8",
+            "body": {
+              "id": 22032,
+              "nodeType": "Block",
+              "src": "1395:81:8",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 22023,
+                        "name": "to",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22015,
+                        "src": "1411:2:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 22024,
+                        "name": "tokenId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22017,
+                        "src": "1415:7:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 22022,
+                      "name": "_mint",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21786,
+                      "src": "1405:5:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
+                        "typeString": "function (address,uint256)"
+                      }
+                    },
+                    "id": 22025,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1405:18:8",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22026,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1405:18:8"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "id": 22028,
+                        "name": "to",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22015,
+                        "src": "1457:2:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 22029,
+                        "name": "tokenId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22017,
+                        "src": "1461:7:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 22027,
+                      "name": "MintSoulBoundToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21971,
+                      "src": "1438:18:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_uint256_$returns$__$",
+                        "typeString": "function (address,uint256)"
+                      }
+                    },
+                    "id": 22030,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1438:31:8",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22031,
+                  "nodeType": "EmitStatement",
+                  "src": "1433:36:8"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 22013,
+              "nodeType": "StructuredDocumentation",
+              "src": "1154:129:8",
+              "text": " @dev Mint To Soul for minting not-transferable Soul Bound Token\n Only the contract creator can mint SBTs"
+            },
+            "functionSelector": "384c9ceb",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 22020,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 22019,
+                  "name": "onlySBTCreator",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 21989,
+                  "src": "1376:14:8"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1376:14:8"
+              }
+            ],
+            "name": "mintToSoul",
+            "nameLocation": "1297:10:8",
+            "parameters": {
+              "id": 22018,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22015,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "1316:2:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22033,
+                  "src": "1308:10:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22014,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1308:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22017,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "1328:7:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22033,
+                  "src": "1320:15:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22016,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1320:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1307:29:8"
+            },
+            "returnParameters": {
+              "id": 22021,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1395:0:8"
+            },
+            "scope": 22148,
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "id": 22060,
+            "nodeType": "FunctionDefinition",
+            "src": "1614:274:8",
+            "body": {
+              "id": 22059,
+              "nodeType": "Block",
+              "src": "1676:212:8",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 22045,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "arguments": [
+                            {
+                              "id": 22041,
+                              "name": "tokenId",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 22036,
+                              "src": "1715:7:8",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            ],
+                            "id": 22040,
+                            "name": "ownerOf",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 21441,
+                            "src": "1707:7:8",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$_t_address_$",
+                              "typeString": "function (uint256) view returns (address)"
+                            }
+                          },
+                          "id": 22042,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1707:16:8",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "expression": {
+                            "id": 22043,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "1727:3:8",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 22044,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "1727:10:8",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "1707:30:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "536f756c426f756e6420546f6b656e3a204f6e6c79206f776e65722063616e207265766f6b65",
+                        "id": 22046,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1751:40:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_a42baaaa650f74d84939660a282eb0ad4eb064f18d7c013ae6a850fe408b1dd6",
+                          "typeString": "literal_string \"SoulBound Token: Only owner can revoke\""
+                        },
+                        "value": "SoulBound Token: Only owner can revoke"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_a42baaaa650f74d84939660a282eb0ad4eb064f18d7c013ae6a850fe408b1dd6",
+                          "typeString": "literal_string \"SoulBound Token: Only owner can revoke\""
+                        }
+                      ],
+                      "id": 22039,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "1686:7:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 22047,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1686:115:8",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22048,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1686:115:8"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 22050,
+                        "name": "tokenId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22036,
+                        "src": "1817:7:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 22049,
+                      "name": "_burn",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21833,
+                      "src": "1811:5:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 22051,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1811:14:8",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22052,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1811:14:8"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 22054,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "1861:3:8",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 22055,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "1861:10:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 22056,
+                        "name": "tokenId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22036,
+                        "src": "1873:7:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 22053,
+                      "name": "RevokeSoulBoundToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21977,
+                      "src": "1840:20:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_uint256_$returns$__$",
+                        "typeString": "function (address,uint256)"
+                      }
+                    },
+                    "id": 22057,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1840:41:8",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22058,
+                  "nodeType": "EmitStatement",
+                  "src": "1835:46:8"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 22034,
+              "nodeType": "StructuredDocumentation",
+              "src": "1482:127:8",
+              "text": " @dev Revoke Soul Bound Token for revoking and burning the SBT\n Only the SBT owner can revoke owned SBT"
+            },
+            "functionSelector": "54d0dd4c",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "revokeSoulBoundToken",
+            "nameLocation": "1623:20:8",
+            "parameters": {
+              "id": 22037,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22036,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "1652:7:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22060,
+                  "src": "1644:15:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22035,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1644:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1643:17:8"
+            },
+            "returnParameters": {
+              "id": 22038,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1676:0:8"
+            },
+            "scope": 22148,
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "id": 22069,
+            "nodeType": "FunctionDefinition",
+            "src": "2129:89:8",
+            "body": {
+              "id": 22068,
+              "nodeType": "Block",
+              "src": "2187:31:8",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 22066,
+                    "name": "baseURI",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 21965,
+                    "src": "2204:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 22065,
+                  "id": 22067,
+                  "nodeType": "Return",
+                  "src": "2197:14:8"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 22061,
+              "nodeType": "StructuredDocumentation",
+              "src": "1894:230:8",
+              "text": " @dev Base URI for computing {tokenURI}. If set, the resulting URI for each\n token will be the concatenation of the `baseURI` and the `tokenId`. Empty\n by default, can be overriden in child contracts."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_baseURI",
+            "nameLocation": "2138:8:8",
+            "parameters": {
+              "id": 22062,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2146:2:8"
+            },
+            "returnParameters": {
+              "id": 22065,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22064,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22069,
+                  "src": "2172:13:8",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 22063,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2172:6:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2171:15:8"
+            },
+            "scope": 22148,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 22083,
+            "nodeType": "FunctionDefinition",
+            "src": "2310:129:8",
+            "body": {
+              "id": 22082,
+              "nodeType": "Block",
+              "src": "2372:67:8",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "hexValue": "536f756c426f756e6420546f6b656e3a204f7065726174696f6e206e6f7420737570706f72746564",
+                        "id": 22079,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2389:42:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_cd53ef2d8c30b6980e2f73e3e3bb6724064dc8b1f043153c963ade7117eb502f",
+                          "typeString": "literal_string \"SoulBound Token: Operation not supported\""
+                        },
+                        "value": "SoulBound Token: Operation not supported"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_cd53ef2d8c30b6980e2f73e3e3bb6724064dc8b1f043153c963ade7117eb502f",
+                          "typeString": "literal_string \"SoulBound Token: Operation not supported\""
+                        }
+                      ],
+                      "id": 22078,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -19,
+                        -19
+                      ],
+                      "referencedDeclaration": -19,
+                      "src": "2382:6:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 22080,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2382:50:8",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22081,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2382:50:8"
+                }
+              ]
+            },
+            "baseFunctions": [
+              21530
+            ],
+            "documentation": {
+              "id": 22070,
+              "nodeType": "StructuredDocumentation",
+              "src": "2224:81:8",
+              "text": " @dev Override with empty implementation, as the method is N.A."
+            },
+            "functionSelector": "095ea7b3",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "approve",
+            "nameLocation": "2319:7:8",
+            "overrides": {
+              "id": 22076,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "2363:8:8"
+            },
+            "parameters": {
+              "id": 22075,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22072,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "2335:2:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22083,
+                  "src": "2327:10:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22071,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2327:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22074,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "2347:7:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22083,
+                  "src": "2339:15:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22073,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2339:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2326:29:8"
+            },
+            "returnParameters": {
+              "id": 22077,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2372:0:8"
+            },
+            "scope": 22148,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 22097,
+            "nodeType": "FunctionDefinition",
+            "src": "2531:163:8",
+            "body": {
+              "id": 22096,
+              "nodeType": "Block",
+              "src": "2627:67:8",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "hexValue": "536f756c426f756e6420546f6b656e3a204f7065726174696f6e206e6f7420737570706f72746564",
+                        "id": 22093,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2644:42:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_cd53ef2d8c30b6980e2f73e3e3bb6724064dc8b1f043153c963ade7117eb502f",
+                          "typeString": "literal_string \"SoulBound Token: Operation not supported\""
+                        },
+                        "value": "SoulBound Token: Operation not supported"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_cd53ef2d8c30b6980e2f73e3e3bb6724064dc8b1f043153c963ade7117eb502f",
+                          "typeString": "literal_string \"SoulBound Token: Operation not supported\""
+                        }
+                      ],
+                      "id": 22092,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -19,
+                        -19
+                      ],
+                      "referencedDeclaration": -19,
+                      "src": "2637:6:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 22094,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2637:50:8",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22095,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2637:50:8"
+                }
+              ]
+            },
+            "baseFunctions": [
+              21554
+            ],
+            "documentation": {
+              "id": 22084,
+              "nodeType": "StructuredDocumentation",
+              "src": "2445:81:8",
+              "text": " @dev Override with empty implementation, as the method is N.A."
+            },
+            "functionSelector": "a22cb465",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setApprovalForAll",
+            "nameLocation": "2540:17:8",
+            "overrides": {
+              "id": 22090,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "2614:8:8"
+            },
+            "parameters": {
+              "id": 22089,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22086,
+                  "mutability": "mutable",
+                  "name": "operator",
+                  "nameLocation": "2566:8:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22097,
+                  "src": "2558:16:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22085,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2558:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22088,
+                  "mutability": "mutable",
+                  "name": "approved",
+                  "nameLocation": "2581:8:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22097,
+                  "src": "2576:13:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 22087,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2576:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2557:33:8"
+            },
+            "returnParameters": {
+              "id": 22091,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2627:0:8"
+            },
+            "scope": 22148,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 22113,
+            "nodeType": "FunctionDefinition",
+            "src": "2786:182:8",
+            "body": {
+              "id": 22112,
+              "nodeType": "Block",
+              "src": "2901:67:8",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "hexValue": "536f756c426f756e6420546f6b656e3a204f7065726174696f6e206e6f7420737570706f72746564",
+                        "id": 22109,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2918:42:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_cd53ef2d8c30b6980e2f73e3e3bb6724064dc8b1f043153c963ade7117eb502f",
+                          "typeString": "literal_string \"SoulBound Token: Operation not supported\""
+                        },
+                        "value": "SoulBound Token: Operation not supported"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_cd53ef2d8c30b6980e2f73e3e3bb6724064dc8b1f043153c963ade7117eb502f",
+                          "typeString": "literal_string \"SoulBound Token: Operation not supported\""
+                        }
+                      ],
+                      "id": 22108,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -19,
+                        -19
+                      ],
+                      "referencedDeclaration": -19,
+                      "src": "2911:6:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 22110,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2911:50:8",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22111,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2911:50:8"
+                }
+              ]
+            },
+            "baseFunctions": [
+              21673
+            ],
+            "documentation": {
+              "id": 22098,
+              "nodeType": "StructuredDocumentation",
+              "src": "2700:81:8",
+              "text": " @dev Override with empty implementation, as the method is N.A."
+            },
+            "functionSelector": "42842e0e",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "safeTransferFrom",
+            "nameLocation": "2795:16:8",
+            "overrides": {
+              "id": 22106,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "2892:8:8"
+            },
+            "parameters": {
+              "id": 22105,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22100,
+                  "mutability": "mutable",
+                  "name": "from",
+                  "nameLocation": "2829:4:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22113,
+                  "src": "2821:12:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22099,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2821:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22102,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "2851:2:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22113,
+                  "src": "2843:10:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22101,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2843:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22104,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "2871:7:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22113,
+                  "src": "2863:15:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22103,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2863:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2811:73:8"
+            },
+            "returnParameters": {
+              "id": 22107,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2901:0:8"
+            },
+            "scope": 22148,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 22131,
+            "nodeType": "FunctionDefinition",
+            "src": "3060:210:8",
+            "body": {
+              "id": 22130,
+              "nodeType": "Block",
+              "src": "3203:67:8",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "hexValue": "536f756c426f756e6420546f6b656e3a204f7065726174696f6e206e6f7420737570706f72746564",
+                        "id": 22127,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "3220:42:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_cd53ef2d8c30b6980e2f73e3e3bb6724064dc8b1f043153c963ade7117eb502f",
+                          "typeString": "literal_string \"SoulBound Token: Operation not supported\""
+                        },
+                        "value": "SoulBound Token: Operation not supported"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_cd53ef2d8c30b6980e2f73e3e3bb6724064dc8b1f043153c963ade7117eb502f",
+                          "typeString": "literal_string \"SoulBound Token: Operation not supported\""
+                        }
+                      ],
+                      "id": 22126,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -19,
+                        -19
+                      ],
+                      "referencedDeclaration": -19,
+                      "src": "3213:6:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 22128,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3213:50:8",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22129,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3213:50:8"
+                }
+              ]
+            },
+            "baseFunctions": [
+              21715
+            ],
+            "documentation": {
+              "id": 22114,
+              "nodeType": "StructuredDocumentation",
+              "src": "2974:81:8",
+              "text": " @dev Override with empty implementation, as the method is N.A."
+            },
+            "functionSelector": "b88d4fde",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "safeTransferFrom",
+            "nameLocation": "3069:16:8",
+            "overrides": {
+              "id": 22124,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "3194:8:8"
+            },
+            "parameters": {
+              "id": 22123,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22116,
+                  "mutability": "mutable",
+                  "name": "from",
+                  "nameLocation": "3103:4:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22131,
+                  "src": "3095:12:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22115,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3095:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22118,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "3125:2:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22131,
+                  "src": "3117:10:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22117,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3117:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22120,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "3145:7:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22131,
+                  "src": "3137:15:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22119,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3137:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22122,
+                  "mutability": "mutable",
+                  "name": "_data",
+                  "nameLocation": "3175:5:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22131,
+                  "src": "3162:18:8",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 22121,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3162:5:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3085:101:8"
+            },
+            "returnParameters": {
+              "id": 22125,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3203:0:8"
+            },
+            "scope": 22148,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 22147,
+            "nodeType": "FunctionDefinition",
+            "src": "3362:178:8",
+            "body": {
+              "id": 22146,
+              "nodeType": "Block",
+              "src": "3473:67:8",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "hexValue": "536f756c426f756e6420546f6b656e3a204f7065726174696f6e206e6f7420737570706f72746564",
+                        "id": 22143,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "3490:42:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_cd53ef2d8c30b6980e2f73e3e3bb6724064dc8b1f043153c963ade7117eb502f",
+                          "typeString": "literal_string \"SoulBound Token: Operation not supported\""
+                        },
+                        "value": "SoulBound Token: Operation not supported"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_cd53ef2d8c30b6980e2f73e3e3bb6724064dc8b1f043153c963ade7117eb502f",
+                          "typeString": "literal_string \"SoulBound Token: Operation not supported\""
+                        }
+                      ],
+                      "id": 22142,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -19,
+                        -19
+                      ],
+                      "referencedDeclaration": -19,
+                      "src": "3483:6:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 22144,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3483:50:8",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22145,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3483:50:8"
+                }
+              ]
+            },
+            "baseFunctions": [
+              21633
+            ],
+            "documentation": {
+              "id": 22132,
+              "nodeType": "StructuredDocumentation",
+              "src": "3276:81:8",
+              "text": " @dev Override with empty implementation, as the method is N.A."
+            },
+            "functionSelector": "23b872dd",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferFrom",
+            "nameLocation": "3371:12:8",
+            "overrides": {
+              "id": 22140,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "3464:8:8"
+            },
+            "parameters": {
+              "id": 22139,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22134,
+                  "mutability": "mutable",
+                  "name": "from",
+                  "nameLocation": "3401:4:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22147,
+                  "src": "3393:12:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22133,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3393:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22136,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "3423:2:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22147,
+                  "src": "3415:10:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22135,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3415:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22138,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "3443:7:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22147,
+                  "src": "3435:15:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22137,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3435:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3383:73:8"
+            },
+            "returnParameters": {
+              "id": 22141,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3473:0:8"
+            },
+            "scope": 22148,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 21960,
+              "name": "ERC721",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 21916,
+              "src": "577:6:8"
+            },
+            "id": 21961,
+            "nodeType": "InheritanceSpecifier",
+            "src": "577:6:8"
+          }
+        ],
+        "canonicalName": "SoulBoundToken",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 21959,
+          "nodeType": "StructuredDocumentation",
+          "src": "95:445:8",
+          "text": " @dev Implementation of Soul Bound Token concept, introduced by Vitalik Buterin in the paper\n https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763. As in it's nature, SBTs are non-transferable\n ERC721s, the propsed implementation extends the widely known ERC721 contract, by overriding all methods related\n to transfers. Several additional functions are added for issuing and revoking SBTs, using the respective modifiers."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          22148,
+          21916
+        ],
+        "name": "SoulBoundToken",
+        "nameLocation": "559:14:8",
+        "scope": 22149,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 8
+}
