@@ -1,6 +1,6 @@
 // import "./App.css";
 import SkillCard from "../SkillCard";
-import athousandwords from "../../utils/1000words.js";
+import athousandwords from "../../utils/25000words.js";
 
 export default function Box() {
   const words = athousandwords.split(" ");
