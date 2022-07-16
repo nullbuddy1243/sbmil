@@ -27,7 +27,8 @@
 }
 
 .skilltext{
-  /* display: contents; */
+  list-style-type:none;
+  display: contents;
 }
 
 .container {
