@@ -25,9 +25,11 @@ Here the browsing user inputs their barter details.
 Barter is the overlap or join between skills + skill asks
 
 M1.skills = [ableton, photoshop, vast deep cut music catalog, speaks protugeese
+
 M1.skillAsks = [ financial modeling of asset in an existing Grafna dashboard ]
 
 M2.skills = [ quantitative finance, python, woodworking crafts, competition level Pool and open to hustling games in bars]
+
 M2.skillAsks = [wants to flirt with Portuguese women during upcoming trip to Lisbon ]
 
 ## Flow Example
