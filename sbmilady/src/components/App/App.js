@@ -1,10 +1,9 @@
-import logo from "./logo.svg";
-import sbmilady from "./sb-_-Milady_V0.0.png";
+// import logo from "./assets/logo.svg";
+// import sbmilady from "./assetes/sb-_-Milady_V0.0.png";
 import "./App.css";
-import SkillCard from "./SkillCard";
-import Box from "./Box";
+import Box from "../Box";
 
-function App() {
+export default function App() {
   return (
     <div>
       <Box />
@@ -20,5 +19,3 @@ function App() {
     // </div>
   );
 }
-
-export default App;
