@@ -27,13 +27,17 @@
 }
 
 .skilltext{
-  /* display: contents; */
-  /* display: contents; */
+  list-style-type:none;
+  display: contents;
 
 }
 
 .skilltexthead {
   display: block;
+}
+
+.skillitem {
+  padding-left: 5px;
 }
 
 .container {
