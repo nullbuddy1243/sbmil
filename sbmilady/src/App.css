@@ -1,0 +1,122 @@
+.App {
+  text-align: center;
+}
+.sbmilady1 {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.skill {
+
+  background-color: dimgrey;
+  color: chartreuse;
+  font-family: monospace;
+  font-size: 12px;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border-style: inset;
+  border-width: 3px;
+  padding-right: 5px;
+
+  align-self: stretch;
+  width: 100%;
+
+}
+
+
+.skillHeader{
+
+}
+
+.skilltext{
+  /* display: contents; */
+}
+
+/* https://stackoverflow.com/questions/15381172/how-can-i-make-flexbox-children-100-height-of-their-parent/50474036#50474036
+ */
+.boxflag {
+  color: chartreuse;
+  /* display: block; */
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  background-color:  #454f62;
+}
+
+.box {
+  display: flex;
+  /* justify-content: space-between; */
+  /* border-style: groove; */
+  color: #454f62;
+  border-radius: 0px;
+  margin: 0;
+  padding-bottom: 0;
+  border-style: double;
+}
+
+.container {
+  height: 200px;
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.5px;
+  border-style: outset;
+}
+.flex-1 {
+  width: 100px;
+  background-color: seagreen;
+}
+.flex-1.leftmost {
+  color: black;
+  font-size: 16px;;
+  background-color: rgb(212, 28, 206);
+
+}
+.flex-2 {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  background-color: #454f62;
+}
+.flex-2-child {
+  margin-top:5px;
+  background-color: black;
+  border-color: gold;
+  border-style:inset;
+  border-width: 2px;
+}
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
