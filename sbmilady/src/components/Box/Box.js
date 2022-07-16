@@ -1,13 +1,27 @@
 // import "./App.css";
 import SkillCard from "../SkillCard";
+import athousandwords from "../../utils/1000words.js";
 
 export default function Box() {
+  let words = athousandwords.split(" ");
   return (
     <div className="Box">
-      {/* <p className="boxflag">Box Skill </p> */}
-      {/* <h5 className="boxflag">Box Skill H5 </h5> */}
-      <SkillCard />
-      {/* <img src={stronger} className="" alt="logo" /> */}
+      <SkillCard 
+        skills={[
+            words[Math.floor(Math.random() * words.length)],
+            words[Math.floor(Math.random() * words.length)],
+            words[Math.floor(Math.random() * words.length)],
+            words[Math.floor(Math.random() * words.length)],
+            words[Math.floor(Math.random() * words.length)]
+          ]}
+        needs={[
+            words[Math.floor(Math.random() * words.length)],
+            words[Math.floor(Math.random() * words.length)],
+            words[Math.floor(Math.random() * words.length)],
+            words[Math.floor(Math.random() * words.length)],
+            words[Math.floor(Math.random() * words.length)]
+        ]}
+      />
     </div>
   );
 }
