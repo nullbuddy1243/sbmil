@@ -6,7 +6,7 @@ export default function SkillCard(props) {
         <div className="sidezone flex-1 leftmost">
           <div>sidezone</div>
           <img 
-            src={`https://miladymaker.net/milady/${Math.floor(Math.random() * 10000) + 1}.png`} 
+            src={`https://miladymaker.net/milady/${props.miladyID}.png`} 
             alt="Milady"
             className='pfp'
           />

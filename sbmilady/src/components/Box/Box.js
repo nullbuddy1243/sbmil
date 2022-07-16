@@ -10,20 +10,22 @@ export default function Box() {
     words[Math.floor(Math.random() * words.length)],
     words[Math.floor(Math.random() * words.length)],
     words[Math.floor(Math.random() * words.length)]
-  ]
+  ];
   const myNeeds = [
     words[Math.floor(Math.random() * words.length)],
     words[Math.floor(Math.random() * words.length)],
     words[Math.floor(Math.random() * words.length)],
     words[Math.floor(Math.random() * words.length)],
     words[Math.floor(Math.random() * words.length)]
-  ]
+  ];
+  const miladyID = Math.floor(Math.random() * 10000) + 1;
 
   return (
     <div className="Box">
       <SkillCard 
         skills={mySkills}
         needs={myNeeds}
+        miladyID={miladyID}
       />
     </div>
   );
