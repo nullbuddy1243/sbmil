@@ -7,7 +7,6 @@
 }
 
 .skill {
-
   background-color: dimgrey;
   color: chartreuse;
   font-family: monospace;
@@ -16,12 +15,10 @@
   flex-direction: row;
   flex-wrap: nowrap;
   border-style: inset;
-  border-width: 3px;
-  padding-right: 5px;
-
+  border-width: 0px;
+  padding-right: 0px;
   align-self: stretch;
   width: 100%;
-
 }
 
 
@@ -53,11 +50,11 @@
   border-radius: 0px;
   margin: 0;
   padding-bottom: 0;
-  border-style: double;
+  /* border-style: double; */
 }
 
 .container {
-  height: 200px;
+  height: 250px;
   width: 500px;
   display: flex;
   flex-direction: row;
@@ -85,7 +82,7 @@
   background-color: black;
   border-color: gold;
   border-style:inset;
-  border-width: 2px;
+  border-width: 3px;
 }
 
 
