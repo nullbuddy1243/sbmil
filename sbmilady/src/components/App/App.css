@@ -14,6 +14,14 @@
   border-radius: 2px;
   max-width: 140px;
 }
+.placeholder {
+  max-width: 140px;
+  width: 140px;
+  height:100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('../../assets/unkown-milady.jpg');
+}
 
 .skill {
   background-color: dimgrey;

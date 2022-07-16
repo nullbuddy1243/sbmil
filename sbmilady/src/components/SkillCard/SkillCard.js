@@ -1,15 +1,23 @@
+import { useState } from 'react';
+
 export default function SkillCard(props) {
+  const [miladyLoading, setMiladyLoading] = useState(true);
+
   return (
     <div className="skill">
       <br></br>
       <div className="container">
         <div className="sidezone flex-1 leftmost">
           <div>sidezone</div>
-          <img 
-            src={`https://miladymaker.net/milady/${props.miladyID}.png`} 
-            alt="Milady"
-            className='pfp'
-          />
+          <div className='placeholder'>
+            <img 
+              src={`https://miladymaker.net/milady/${props.miladyID}.png`} 
+              alt="Milady"
+              className='pfp'
+              onLoad={() => setMiladyLoading(false)}
+              style={miladyLoading ? {display:'none'} : undefined}
+            />
+          </div>
         </div>
         <div className="flex-2">
           flex-1
