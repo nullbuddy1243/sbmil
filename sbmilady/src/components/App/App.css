@@ -10,14 +10,16 @@
   padding: 10px;
 }
 .pfp {
-  border:2px solid #282c34;
-  border-radius: 2px;
-  max-width: 140px;
-}
-.placeholder {
   max-width: 140px;
   width: 140px;
-  height:100%;
+}
+.placeholder {
+  border:2px solid #282c34;
+  border-radius: 2px;
+  
+  max-width: 140px;
+  width: 140px;
+  height:175px;
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url('../../assets/unkown-milady.jpg');
