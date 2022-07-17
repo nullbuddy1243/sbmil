@@ -3,3 +3,21 @@
   flex: 1 1;
   margin-top: 33px;
 }
+
+img.badge {
+  flex-direction: initial;
+  display: inline-flex;
+  height: 30px;
+  margin: 3px;
+  ;
+}
+
+.badgediv {
+  display: inline;
+}
+
+/* #root > div > div:nth-child(2) > div > div > div:nth-child(3) > div.flex-2-child.socialbox > ul > img {
+  flex-direction: initial;
+  display: inline-flex;
+  height: 40px;
+} */
