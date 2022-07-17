@@ -1,0 +1,6 @@
+[submodule "sbmilady-contracts/lib/solmate"]
+	path = sbmilady-contracts/lib/solmate
+	url = https://github.com/rari-capital/solmate
+[submodule "sbmilady-contracts/lib/forge-std"]
+	path = sbmilady-contracts/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
