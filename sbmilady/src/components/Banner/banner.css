@@ -1,0 +1,15 @@
+.banner {
+    min-height: 60px;
+    background-color: #3a3b3c;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner a {
+    padding-left: 25px;
+    padding-right: 25px;
+    color:white;
+    font-size: x-large;
+}

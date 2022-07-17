@@ -2,7 +2,7 @@
 import SkillCard from "../SkillCard";
 import athousandwords from "../../utils/25000words.js";
 
-export default function Box() {
+function Box() {
   const words = athousandwords.split(" ");
   const mySkills = [
     words[Math.floor(Math.random() * words.length)],
@@ -30,3 +30,5 @@ export default function Box() {
     </div>
   );
 }
+
+export default Box;

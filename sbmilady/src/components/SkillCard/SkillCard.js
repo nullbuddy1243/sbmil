@@ -4,12 +4,12 @@ import { default as im } from "../../assets/milady100x125/06_small.png";
 
 import "./skillcard.css";
 
-export default function SkillCard(props) {
+function SkillCard(props) {
   const [miladyLoading, setMiladyLoading] = useState(true);
 
   const Badge = ({ id }) => (
     <div className={`badgediv`}>
-      <img src={im} id={`badge-${id}`} className="badge" />
+      <img src={im} id={`badge-${id}`} className="badge" alt="Badge" />
     </div>
   );
   // const badgeElements =
@@ -81,3 +81,5 @@ export default function SkillCard(props) {
     </div>
   );
 }
+
+export default SkillCard;
