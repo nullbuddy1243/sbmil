@@ -14,6 +14,9 @@
  SB-_-Milady [==------------------]  10%
 ```
 
+## up next: zk 'proof of milady' project operations
+
+
 ## Origin Tweet
 
 ![t1.png](./static/t1.png)
